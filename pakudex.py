@@ -14,7 +14,7 @@ class Pakudex:
     def get_species_array(self):
         if len(self.species_list) == 0:
             return None
-        return self.species_list
+        return [species.get_species() for species in self.species_list]
 
     def add_pakuri(self, species):
         if len(self.species_list) >= self.capacity:
